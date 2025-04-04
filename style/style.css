@@ -67,10 +67,17 @@ a{
     width: 100%;
     height: 60vh;
     color: white;
-    background-position-y: calc(40%);
+    position: relative;
+    /* background-position-y: calc(40%);
     background-position-x: 50%;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+}
+.hero img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: calc(40%);
 }
 .hero .hero-content{
     height: 100%;
@@ -79,6 +86,8 @@ a{
     display: grid;
     align-items: center;
     justify-items: center;
+    position: absolute;
+    inset: 0;
 }
 
 .hero .hero-content h1{
