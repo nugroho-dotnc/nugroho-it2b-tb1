@@ -6,12 +6,17 @@
     font-family: 'flying-debris'; /*memberikan nama bebas untuk font*/
     src: url('../asset/font/flying-debris/Flying-Debris.otf');/*memanggil file font eksternalnya di folder nexa*/
   }
+@font-face {
+    font-family: 'poppins';
+    src: url('../asset/font/poppins/Poppins-Regular.ttf');
+}
+
 body{
     margin: 0;
     padding: 0;
     /* background-color: #eeebe8; */
     background-color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'poppins';
 }
 a{
     text-decoration: none;
@@ -20,16 +25,16 @@ a{
     cursor: pointer;
 }
 .nav-container{
-    
     background-color: #161717;
     display: grid;
     align-items: center;
     width: 100%;
     position: fixed;
+    z-index: 99;
 }
 .navbar{
     padding: 10px 20px;
-    height: 4rem;
+    height: 4em;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -67,18 +72,12 @@ a{
     width: 100%;
     height: 60vh;
     color: white;
-    position: relative;
-    /* background-position-y: calc(40%);
+    background-position-y: calc(40%);
     background-position-x: 50%;
     background-size: cover;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
 }
-.hero img{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    object-position: calc(40%);
-}
+
 .hero .hero-content{
     height: 100%;
     width: 100%;
@@ -86,19 +85,17 @@ a{
     display: grid;
     align-items: center;
     justify-items: center;
-    position: absolute;
-    inset: 0;
 }
 
 .hero .hero-content h1{
    font-size: 48px;
     letter-spacing: 6px;
     font-family: flying-debris;
+    text-align: center;
 }
 .main-container h1{
     text-align: center;
     text-transform: capitalize;
-    letter-spacing: 4px;
 }
 .main-container p{
     text-align: center;
@@ -145,6 +142,7 @@ a{
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 kolom */
     gap: 1rem;
+    position: relative;
 }
 .grid-items{
     grid-column: span 1;
@@ -153,14 +151,19 @@ a{
 .card-items{
     height: 22rem;
     background-color: black;
+    position: relative;
     border-radius: 8px;
     overflow: hidden;
-    position: relative;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-items:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 .card-items div{
-    position: absolute;
     inset: 0;
+    position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
     height: 25%;
     width: 100%;
@@ -184,10 +187,121 @@ a{
         height: 100%;
         object-fit: cover;
         border-radius: 8px;  }
+
+        .horizontal-card {
+            display: flex;
+            flex-direction: row;
+            height: 18rem;
+            text-align: left;
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 1.5rem 0;
+            border: 1px solid #f0f0f0;
+            position: relative;
+        }
+        
+        .horizontal-card.reverse {
+            flex-direction: row-reverse;
+        }
+        
+        .horizontal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .horizontal-card .image-frame {
+            width: 25%;
+            height: 100%;
+            padding: 1rem;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;        }
+        
+        .horizontal-card .image-frame img {
+            width: 75%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            filter: grayscale(20%);
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .horizontal-card:hover .image-frame img {
+            filter: grayscale(0%);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .horizontal-card .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem;
+            width: 75%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        
+        .horizontal-card h3 {
+            font-size: 1.5rem;
+            margin: 0 0 1rem 0;
+            color: #222;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+    
+        
+        .horizontal-card p {
+            margin: 0;
+            text-align: start;
+            color: #555;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
 @media (max-width: 1024px){
     .centerize .main-container .new-section .grid{
         display: grid;
         grid-template-columns: repeat(1, 1fr); /* 4 kolom */
         gap: 1rem;
+    }
+    .nav-container .navbar ul{
+        visibility: hidden;
+    }
+    .horizontal-card {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .horizontal-card.reverse {
+        flex-direction: column;
+    }
+    
+    .horizontal-card .image-frame {
+        width: 100%;
+        height: 250px;
+        padding: 1.5rem;
+    }
+    
+    .horizontal-card .content {
+        width: 100%;
+        padding: 1.5rem;
+    }
+    
+    .horizontal-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .horizontal-card p {
+        font-size: 0.9rem;
+    }
+    .horizontal-card .image-frame img {
+        width: 100%;
     }
 }
