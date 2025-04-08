@@ -3,34 +3,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Family</title>
-    <link rel="stylesheet" type="text/css" href=".././style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../style/style.css"/>
 </head>
 <body>
     <div class="nav-container">
         <nav class="navbar">
-            <h1>
-                <a href="../index.html">
+            <div class="flex-mobile">
+                <h1>
+                    <a href="../../index.html">
                     PROFILE
-                </a>
-            </h1>
-            <ul>
+                    </a>
+                </h1>
+                <button class="burger" onclick="toggleBurger()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </button>
+            </div>
+            <ul id="nav-links">
                 <li>
-                    <a href="./about-me.html">
+                    <a href="../../pages/about-me" >
                          Me
                     </a>
                 </li>
                 <li>
-                    <a href="./my-family.html" class="active">
+                    <a href="../../pages/my-family" class="active">
                          Family
                     </a>
                 </li>
                 <li>
-                    <a href="./my-friends.html">
+                    <a href="../../pages/my-friends">
                          Friends
                     </a>
                 </li>
                 <li>
-                    <a href="./my-hobbies.html">
+                    <a href="../../pages/my-hobbies">
                          Hobbies
                     </a>
                 </li>
@@ -39,7 +46,7 @@
     </div>
     <div  style="height: 5rem;"></div>
         <main>
-            <div class="hero" style="background-image: url('/asset/image/family-bg.JPG');">
+            <div class="hero" style="background-image: url('../../asset/image/family-bg.JPG');">
                 <div class="hero-content">
                     <h1 >
                         My Lovely Family!
@@ -52,28 +59,31 @@
                 <h1>
                     Family Members:
                 </h1>
+                <p>
+                    Ini adalah anggota keluargaku, terdiri dari sepasang orang tua dan 4 anak, aku sendiri adalah anak ke 4 dari 4 bersaudara, untuk mengetahui siapa aja anggota keluargaku, silahkan scroll kebawah ...
+                </p>
                 <hr style="border: solid 1px;">
                 <div class="horizontal-card ">
                     <div class="image-frame">
-                        <img src="../asset/image/family/ibu.jpg">
+                        <img src="../../asset/image/family/ibu.jpg">
                     </div>
                     <div class="content">
-                        <h3>Ibu Nyoman Tri Handayani</h3>
+                        <h3>Ibu Nugi</h3>
                         <p>Lahir pada tahun 1970, merupakan anak terakhir di keluarganya.</p>
                     </div>
                 </div>                
                 <div class="horizontal-card reverse">
                     <div class="image-frame">
-                        <img src="../asset/image/family/bapak.jpg">
+                        <img src="../../asset/image/family/bapak.jpg">
                     </div>
                     <div class="content">
-                        <h3>Bapak Nur Al Imam</h3>
+                        <h3>Bapak Nugi</h3>
                         <p>Lahir pada tahun 1965, merupakan anak ke 6 dari 8 bersaudara.</p>
                     </div>
                 </div>                
                 <div class="horizontal-card ">
                     <div class="image-frame">
-                        <img src="../asset/image/family/fauzia.jpg">
+                        <img src="../../asset/image/family/fauzia.jpg">
                     </div>
                     <div class="content">
                         <h3>Fauzia Rahmawati Al Khusna</h3>
@@ -82,7 +92,7 @@
                 </div>                
                 <div class="horizontal-card reverse">
                     <div class="image-frame">
-                        <img src="../asset/image/family/anya.jpg">
+                        <img src="../../asset/image/family/anya.jpg">
                     </div>
                     <div class="content">
                         <h3>Anya Shafira Al Chairany</h3>
@@ -91,7 +101,7 @@
                 </div>                
                 <div class="horizontal-card ">
                     <div class="image-frame">
-                        <img src="../asset/image/family/aubin.jpg">
+                        <img src="../../asset/image/family/aubin.jpg">
                     </div>
                     <div class="content">
                         <h3>Aubin Sava Rausan Fikr</h3>
@@ -100,7 +110,7 @@
                 </div>                
                 <div class="horizontal-card reverse">
                     <div class="image-frame">
-                        <img src="../asset/image/family/nugroho.jpg">
+                        <img src="../../asset/image/family/nugroho.jpg">
                     </div>
                     <div class="content">
                         <h3>Nugroho Nur Cahyo</h3>
@@ -115,7 +125,7 @@
                     <hr style="border: solid 1px;"> 
                     <div class="grid" style="margin-top: 4rem;">
                         <div class="grid-items card-items">
-                            <img src="../asset/image/family/kuyik.jpg"/>
+                            <img src="../../asset/image/family/kuyik.jpg"/>
                             <div>
                                 <h3>
                                    Kuyik (RIP)
@@ -123,7 +133,7 @@
                             </div>
                         </div>
                         <div class="grid-items card-items">
-                            <img src="../asset/image/family/cumil-besar.jpg"/>
+                            <img src="../../asset/image/family/cumil-besar.jpg"/>
                             <div>
                                 <h3>
                                    Cumil Besar
@@ -131,7 +141,7 @@
                             </div>
                         </div>
                         <div class="grid-items card-items">
-                            <img src="../asset/image/family/cumil-kecil.jpg"/>
+                            <img src="../../asset/image/family/cumil-kecil.jpg"/>
                             <div>
                                 <h3>
                                    Cumil Kecil
@@ -139,7 +149,7 @@
                             </div>
                         </div>
                         <div class="grid-items card-items">
-                            <img src="../asset/image/family/petruk.jpg"/>
+                            <img src="../../asset/image/family/petruk.jpg"/>
                             <div>
                                 <h3>
                                    Petruk
@@ -150,6 +160,6 @@
                 </div>
             </div>
         </div>
-        
+        <script  src="../../js/navbar.js"></script>
 </body>
 </html>

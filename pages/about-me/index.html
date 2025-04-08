@@ -3,34 +3,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <link rel="stylesheet" type="text/css" href=".././style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../style/style.css"/>
 </head>
 <body>
     <div class="nav-container">
         <nav class="navbar">
-            <h1>
-                <a href="../index.html">
+            <div class="flex-mobile">
+                <h1>
+                    <a href="../../index.html">
                     PROFILE
-                </a>
-            </h1>
-            <ul>
+                    </a>
+                </h1>
+                <button class="burger" onclick="toggleBurger()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </button>
+            </div>
+            <ul id="nav-links">
                 <li>
-                    <a href="./about-me.html" class="active">
+                    <a href="../../pages/about-me" class="active">
                          Me
                     </a>
                 </li>
                 <li>
-                    <a href="./my-family.html">
+                    <a href="../../pages/my-family">
                          Family
                     </a>
                 </li>
                 <li>
-                    <a href="./my-friends.html">
+                    <a href="../../pages/my-friends">
                          Friends
                     </a>
                 </li>
                 <li>
-                    <a href="./my-hobbies.html">
+                    <a href="../../pages/my-hobbies">
                          Hobbies
                     </a>
                 </li>
@@ -39,21 +46,8 @@
     </div>
     <div  style="height: 5rem;"></div>
         <main>
-            <!-- <div class="hero" style="background-image: url('/asset/image/me-as-bg.jpg');">
-                <div class="hero-content">
-                    <h1 >
-                        This is me!
-                    </h1>
-                </div>
-            </div> -->
             <div class="centerize">
                 <div class="main-container">
-                    <div class="new-section centerize">
-                        <video height="480" controls>
-                            <source src="../asset/image/me/introduction.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                          </video>
-                    </div>
                     <div class="new-section">
                         <h1>
                             Hello!
@@ -65,6 +59,22 @@
                         <p>
                             Saya memiliki berbagai hobi yang menyenangkan, seperti sepak bola, fotografi, bernyanyi, dan tentu saja bermain game. Dalam hal kuliner, saya sangat mencintai bakso, yang bagi saya lebih dari sekadar makanan. Bakso adalah simbol kemakmuran dan kebersamaan, dengan bola-bola daging yang menggambarkan kekuatan hidup yang penuh kelezatan.
                         </p>
+                        <div  class="video-container">
+                            <div class="video-items">
+                                <video width="100%" class="intro-videos" controls>
+                                    <source src="../../asset/image/me/introduction.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                  </video>
+                            </div>
+                            <div class="video-content">
+                                <h1 style="margin: 0; text-align: start;">
+                                    Sedikit Sapaan Dari Saya!
+                                </h1>
+                                <p style="text-align: start; margin: 0; margin-top: 12px;">
+                                   video ini ada hanya untuk mempermanis web ini ya ges ya, isinya cuma aku yang sedang memperkenalkan diriku, mulai dari lahir tahun berapa, umur saat ini, sekolah dimana hingga hobiku apa saja. Semoga video ini bisa menghibur, lol. Enjoy guys!
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="new-section">
                         <h1>
@@ -73,21 +83,23 @@
                         <hr style="border: solid 1px;">
                         <div class="grid">
                             <div class="grid-items">
-                                <img style="height: 24rem; width: 100%; object-fit: cover; border-radius: 10px; filter: brightness(80%);" src="../asset/image/me/me-1.jpg"> 
+                                <img class="img-gallery" src="../../asset/image/me/me-1.jpg"> 
                             </div>
                             <div class="grid-items">
-                                <img style="height: 24rem; width: 100%; object-fit: cover; border-radius: 10px; filter: brightness(80%);" src="../asset/image/me/me-2.jpg"> 
+                                <img class="img-gallery" src="../../asset/image/me/me-2.jpg"> 
                             </div>
                             <div class="grid-items">
-                                <img style="height: 24rem; width: 100%; object-fit: cover; border-radius: 10px; filter: brightness(80%);" src="../asset/image/family-members-3.jpg"> 
+                                <img class="img-gallery" src="../../asset/image/family-members-3.jpg"> 
                             </div>
                             <div class="grid-items">
-                                <img style="height: 24rem; width: 100%; object-fit: cover; border-radius: 10px; filter: brightness(80%);" src="../asset/image/friends-1.jpg"> 
+                                <img class="img-gallery" src="../../asset/image/friends/friends-5.jpg"> 
                             </div>
                         </div>
                     </div>
+                   
                 </div>
             </div>
         </main>
+        <script  src="../../js/navbar.js"></script>
 </body>
 </html>
